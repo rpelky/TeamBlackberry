@@ -55,6 +55,22 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.16.1, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[91.0.4472.1900, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.8.14, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.8.14, )"
             }
           },
           "imports": [
@@ -175,17 +191,25 @@
               "target": "Package",
               "version": "[3.141.0, )"
             },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[91.0.4472.1900, )"
+            },
             "SendGrid": {
               "target": "Package",
               "version": "[9.23.1, )"
             },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.8.14, )"
+            },
             "SpecFlow.NUnit": {
               "target": "Package",
-              "version": "[3.7.38, )"
+              "version": "[3.8.14, )"
             },
-            "SpecFlow.Plus.LivingDocPlugin": {
+            "SpecFlow.Tools.MsBuild.Generation": {
               "target": "Package",
-              "version": "[3.7.141, )"
+              "version": "[3.8.14, )"
             },
             "reCAPTCHA.AspNetCore": {
               "target": "Package",

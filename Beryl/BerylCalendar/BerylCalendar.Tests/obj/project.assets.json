@@ -1629,6 +1629,12 @@
           "lib/netstandard2.0/WebDriver.dll": {}
         }
       },
+      "Selenium.WebDriver.ChromeDriver/91.0.4472.1900": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      },
       "SendGrid/9.23.1": {
         "type": "package",
         "dependencies": {
@@ -1642,7 +1648,7 @@
           "lib/netstandard2.0/SendGrid.dll": {}
         }
       },
-      "SpecFlow/3.7.38": {
+      "SpecFlow/3.8.14": {
         "type": "package",
         "dependencies": {
           "BoDi": "1.5.0",
@@ -1662,15 +1668,15 @@
           "lib/netstandard2.0/TechTalk.SpecFlow.dll": {}
         },
         "build": {
-          "build/_._": {}
+          "build/SpecFlow.targets": {}
         }
       },
-      "SpecFlow.NUnit/3.7.38": {
+      "SpecFlow.NUnit/3.8.14": {
         "type": "package",
         "dependencies": {
-          "NUnit": "3.11.0",
-          "SpecFlow": "[3.7.38]",
-          "SpecFlow.Tools.MsBuild.Generation": "[3.7.38]"
+          "NUnit": "3.13.1",
+          "SpecFlow": "[3.8.14]",
+          "SpecFlow.Tools.MsBuild.Generation": "[3.8.14]"
         },
         "compile": {
           "lib/net5.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {}
@@ -1682,32 +1688,17 @@
           "build/_._": {}
         }
       },
-      "SpecFlow.Plus.LivingDocPlugin/3.7.141": {
+      "SpecFlow.Tools.MsBuild.Generation/3.8.14": {
         "type": "package",
         "dependencies": {
-          "SpecFlow": "[3.7.13, 3.8.0)",
-          "SpecFlow.Tools.MsBuild.Generation": "[3.7.13, 3.8.0)",
-          "Utf8Json": "1.3.7"
-        },
-        "compile": {
-          "lib/netstandard2.0/LivingDoc.Dtos.dll": {},
-          "lib/netstandard2.0/LivingDoc.SpecFlowPlugin.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/LivingDoc.Dtos.dll": {},
-          "lib/netstandard2.0/LivingDoc.SpecFlowPlugin.dll": {}
-        }
-      },
-      "SpecFlow.Tools.MsBuild.Generation/3.7.38": {
-        "type": "package",
-        "dependencies": {
-          "SpecFlow": "[3.7.38]"
+          "SpecFlow": "[3.8.14]"
         },
         "build": {
-          "build/_._": {}
+          "build/SpecFlow.Tools.MsBuild.Generation.props": {},
+          "build/SpecFlow.Tools.MsBuild.Generation.targets": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
+          "buildMultiTargeting/SpecFlow.Tools.MsBuild.Generation.props": {}
         }
       },
       "starkbank-ecdsa/1.3.1": {
@@ -3376,9 +3367,11 @@
           "Newtonsoft.Json": "12.0.3",
           "Selenium.Firefox.WebDriver": "0.27.0",
           "Selenium.WebDriver": "3.141.0",
+          "Selenium.WebDriver.ChromeDriver": "91.0.4472.1900",
           "SendGrid": "9.23.1",
-          "SpecFlow.NUnit": "3.7.38",
-          "SpecFlow.Plus.LivingDocPlugin": "3.7.141",
+          "SpecFlow": "3.8.14",
+          "SpecFlow.NUnit": "3.8.14",
+          "SpecFlow.Tools.MsBuild.Generation": "3.8.14",
           "reCAPTCHA.AspNetCore": "3.0.10"
         },
         "compile": {
@@ -5956,6 +5949,24 @@
         "selenium.webdriver.nuspec"
       ]
     },
+    "Selenium.WebDriver.ChromeDriver/91.0.4472.1900": {
+      "sha512": "H8N5+WEr6o1pEcQpq8pODJwjMeWqxU3zvMZZLBTPjMBI+rJ51OPDeWHCdOLniXo4YrawrnvkHC7luwfMp64UpA==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/91.0.4472.1900",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.91.0.4472.1900.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
     "SendGrid/9.23.1": {
       "sha512": "YjGu+HRJ7wUNeBrUGuJRKLvuHNx+tVEzdQalc0r/HTaNTJcAglBXKJs4n7FsFpBNV3S0Wx5m7M6Zi4fthJfEhg==",
       "type": "package",
@@ -5979,10 +5990,10 @@
         "sendgrid.nuspec"
       ]
     },
-    "SpecFlow/3.7.38": {
-      "sha512": "3m2t8FvSoCmCzEiFttuLYr8hRLllufIZSQW9e1+hUk7Yb+EhFpdgCehJmQZXgy8XROlVEDLEI+mVCSpNDXE4bQ==",
+    "SpecFlow/3.8.14": {
+      "sha512": "/f3GdHWXTjnHb6XCbEwduRDi+rFAC+/GWbM3wqanlazcVBTPZ+OI/G95slXO+7Gx60KjZAuJ3uSWVYPKKjqQuQ==",
       "type": "package",
-      "path": "specflow/3.7.38",
+      "path": "specflow/3.8.14",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6001,14 +6012,14 @@
         "lib/netstandard2.0/TechTalk.SpecFlow.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.xml",
-        "specflow.3.7.38.nupkg.sha512",
+        "specflow.3.8.14.nupkg.sha512",
         "specflow.nuspec"
       ]
     },
-    "SpecFlow.NUnit/3.7.38": {
-      "sha512": "LmIz2NoS5cBbndkz8l+FcRr4H5LEZEGv0kVphE5IBChUcW96IvC7JHVDjrOe0j9Sie6fi9J0+Av/IqkZ9f83cw==",
+    "SpecFlow.NUnit/3.8.14": {
+      "sha512": "b+pFGu2cuZ8dquKlZGXX4g+Vs/1wUqFVBB3L0xSZS2T8WAp+Wkm9OFQLzom4NtsJ2OJiq6I1VoN6RVhwdAZ6qg==",
       "type": "package",
-      "path": "specflow.nunit/3.7.38",
+      "path": "specflow.nunit/3.8.14",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6031,30 +6042,14 @@
         "lib/net5.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.pdb",
-        "specflow.nunit.3.7.38.nupkg.sha512",
+        "specflow.nunit.3.8.14.nupkg.sha512",
         "specflow.nunit.nuspec"
       ]
     },
-    "SpecFlow.Plus.LivingDocPlugin/3.7.141": {
-      "sha512": "7aiXRhCyZxZyGUxxERwuItPQuUZ1Gr/tajQ/2Wa/oous7PYa3/L8DYkCi7BvU354r0/LmwimJ+pCgNFvFhnrsQ==",
+    "SpecFlow.Tools.MsBuild.Generation/3.8.14": {
+      "sha512": "AXguQixzI2I+3zLqUFJ2LH6sBUfo3gGow0Mtnfy9LP0GDQFP8GfDfey7IOpkJ0yJjIt6xLhRRUNW355mogXhWg==",
       "type": "package",
-      "path": "specflow.plus.livingdocplugin/3.7.141",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "images/specflow-icon.png",
-        "lib/net461/LivingDoc.Dtos.dll",
-        "lib/net461/LivingDoc.SpecFlowPlugin.dll",
-        "lib/netstandard2.0/LivingDoc.Dtos.dll",
-        "lib/netstandard2.0/LivingDoc.SpecFlowPlugin.dll",
-        "specflow.plus.livingdocplugin.3.7.141.nupkg.sha512",
-        "specflow.plus.livingdocplugin.nuspec"
-      ]
-    },
-    "SpecFlow.Tools.MsBuild.Generation/3.7.38": {
-      "sha512": "JvXw23xgtCqxuBRwgoKgogNgAk8p4TvNTSt9wTryi1P5vegYnzyFXocQ2njJoICsx3N662Bu21+HyPUAuxw8xA==",
-      "type": "package",
-      "path": "specflow.tools.msbuild.generation/3.7.38",
+      "path": "specflow.tools.msbuild.generation/3.8.14",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6071,7 +6066,7 @@
         "licenses/Gherkin-LICENSE-MIT.txt",
         "licenses/Newtonsoft.Json-LICENSE-MIT.md",
         "licenses/System.ValueTuple-LICENSE-MIT.txt",
-        "specflow.tools.msbuild.generation.3.7.38.nupkg.sha512",
+        "specflow.tools.msbuild.generation.3.8.14.nupkg.sha512",
         "specflow.tools.msbuild.generation.nuspec",
         "tasks/net461/BoDi.dll",
         "tasks/net461/Cucumber.Messages.dll",
@@ -10780,7 +10775,11 @@
       "BerylCalendar >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
-      "NUnit3TestAdapter >= 3.16.1"
+      "NUnit3TestAdapter >= 3.16.1",
+      "Selenium.WebDriver >= 3.141.0",
+      "Selenium.WebDriver.ChromeDriver >= 91.0.4472.1900",
+      "SpecFlow >= 3.8.14",
+      "SpecFlow.Tools.MsBuild.Generation >= 3.8.14"
     ]
   },
   "packageFolders": {
@@ -10837,6 +10836,22 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.16.1, )"
+          },
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[3.141.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[91.0.4472.1900, )"
+          },
+          "SpecFlow": {
+            "target": "Package",
+            "version": "[3.8.14, )"
+          },
+          "SpecFlow.Tools.MsBuild.Generation": {
+            "target": "Package",
+            "version": "[3.8.14, )"
           }
         },
         "imports": [
@@ -10860,5 +10875,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Detected package downgrade: NUnit from 3.13.1 to 3.12.0. Reference the package directly from the project to select a different version. \r\n BerylCalendar.Tests -> BerylCalendar -> SpecFlow.NUnit 3.8.14 -> NUnit (>= 3.13.1) \r\n BerylCalendar.Tests -> NUnit (>= 3.12.0)",
+      "libraryId": "NUnit",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
