@@ -131,7 +131,7 @@ namespace BerylCalendar.Controllers
         {
             string userName = userManager.GetUserName(User);
             var events = await _eveRepo.GetAllEvents("", userName);
-            ViewData["today"] = new DateTime(year, month, day, 0, 0, 0);
+            ViewData["today"] = DateTimeUtilities.GetDayByDate(year, month, day);
 
             var events3 = await _eveRepo.GetAllEvents(filter, userName);
             if (filter != null)

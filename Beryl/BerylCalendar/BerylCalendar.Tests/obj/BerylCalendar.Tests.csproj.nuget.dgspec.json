@@ -186,6 +186,10 @@
             "SpecFlow.Plus.LivingDocPlugin": {
               "target": "Package",
               "version": "[3.7.141, )"
+            },
+            "reCAPTCHA.AspNetCore": {
+              "target": "Package",
+              "version": "[3.0.10, )"
             }
           },
           "imports": [
